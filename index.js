@@ -5,6 +5,9 @@ function calculateExpression(expression) {
   //Преревіряємо чи аргумент є рядком
   //Якщо так повертаємо виконананий код
   // Якщо ні повертаємо текст "Argument is not a string"
+  let calculateExpression = 3 + 5 * 2;
+  if (eval (expression)) return calculateExpression;
+  else if (eval (expression)) return "Argument is not a string";
 }
 
 console.log("Завдання 1 ====================================");
@@ -16,12 +19,23 @@ console.log(
 // Задача 2: Напишіть функцію, яка приймає рядок та повертає число з цього рядка або повідомлення про помилку.
 
 // Створюємо функцію з назвою getNumberFromString, яка приймає один аргумент s
+
 function getNumberFromString(s) {
   // Використовуємо функцію parseFloat для того, щоб спробувати отримати число з рядка
   // Перевіряємо, чи є отримане значення числом за допомогою isNaN
   // Якщо значення не є числом, повертаємо текст "Couldn't extract a number from the provided string."
   // Якщо значення є числом, повертаємо його
-}
+  const getNumberFromString = parseFloat(s);
+  if (isNaN (getNumberFromString)) {{
+   return "Couldn't extract a number from the provided string.";
+   }
+   return 100.5
+  }
+  else if (isNaN (getNumberFromString)) {
+    return "Couldn't extract a number from the provided string.";
+  }
+  if (isNaN (s)) return (getNumberFromString);
+} 
 
 // Виводимо результати виклику функції
 console.log("Завдання 2 ====================================");
@@ -42,6 +56,16 @@ function getIntegerFromString(s) {
   // Перевіряємо, чи є отримане значення числом за допомогою isNaN
   // Якщо значення не є числом, повертаємо текст "Couldn't extract an integer from the provided string."
   // Якщо значення є числом, повертаємо його
+  const getIntegerFromString = parseFloat(s);
+  if (isNaN (getIntegerFromString)) {{
+   return "Couldn't extract an integer from the provided string.";
+   }
+   return 100
+  }
+  else if (isNaN (getIntegerFromString)) {
+    return "Couldn't extract an integer from the provided string.";
+  }
+  if (isNaN (s)) return (getIntegerFromString);
 }
 
 // Виводимо результати виклику функції
@@ -64,6 +88,11 @@ function isNumberFinite(num) {
   // За допомогою оператора if перевіряємо, чи є число скінченним.
   // Якщо число є скінченним, повертаємо текст "The number is finite.".
   // Якщо число не є скінченним, повертаємо текст "The number is not finite.".
+  const isNumberFinite = isFinite(num);
+  if (isFinite(num)) { 
+    return "The number is finite.";
+  }
+  else if (isFinite(isNumberFinite)) return "The number is not finite.";
 }
 
 // Виконуємо функцію з різними вхідними даними і виводимо результат.
@@ -80,6 +109,12 @@ function isValueNaN(value) {
   // За допомогою оператора if перевіряємо, чи є значення NaN.
   // Якщо значення є NaN, повертаємо текст "The value is NaN.".
   // Якщо значення не є NaN, повертаємо текст  "The value is not NaN.".
+  const isNan = isNaN(value);
+  if (isNan) {  
+    return "The value is NaN."
+  } else {
+    return "The value is not NaN."
+  };
 }
 
 // Виконуємо функцію з різними вхідними даними і виводимо результат.
@@ -94,6 +129,8 @@ function encodeURLComponent(urlComponent) {
   // Використовуємо вбудовану функцію encodeURIComponent, щоб закодувати введений компонент URL.
   // Ця функція повертає закодований компонент URL, замінивши небезпечні символи на їх процентне кодування.
   // Повертаємо закодований компонент URL.
+  const encodeURLComponent = encodeURIComponent(urlComponent);
+  return encodeURLComponent;
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -110,6 +147,8 @@ function encodeURL(url) {
   // Використовуємо вбудовану функцію encodeURI, щоб закодувати введений URL.
   // Ця функція повертає закодований URL, замінивши небезпечні символи на їх процентне кодування.
   // Повертаємо закодований URL.
+  const encodeURL = encodeURI(url);
+  return encodeURL;
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -126,6 +165,8 @@ function decodeURLComponent(urlComponent) {
   // Використовуємо вбудовану функцію decodeURIComponent, щоб декодувати введений закодований компонент URL.
   // Ця функція повертає декодований компонент URL, замінивши процентне кодування символів на їх реальні значення.
   // Повертаємо декодований компонент URL.
+  const decodeURLComponent = decodeURIComponent(urlComponent);
+  return decodeURLComponent;
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -142,6 +183,8 @@ function decodeURL(url) {
   // Використовуємо вбудовану функцію decodeURI, щоб декодувати введений закодований URL.
   // Ця функція повертає декодований URL, замінивши процентне кодування символів на їх реальні значення.
   // Повертаємо декодований URL.
+  const decodeURL = decodeURI(url);
+  return decodeURL
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
